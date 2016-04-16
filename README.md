@@ -11,12 +11,12 @@ We'll add more information later, right now getting everything orginized.
 
 2. Generate Ideas with Team for Improvements
 
-3. Contact Drew Mitchell for Sprites Use (optional)
-  [His Webpage](http://randompokemon.com/)
+3. Contact Drew Mitchell for Sprites Use (optional)  
+[His Webpage](http://randompokemon.com/)
 
 # Team
-GostOmega (Bot host, Experienced) 
-Lizzy (Server Owner) 
-ed-george (Experienced) 
-Joe5029 (Idea Creator) 
-Davey is the Best (Learning, Participating) 
+GostOmega (Bot host, Experienced)  
+Lizzy (Server Owner)  
+ed-george (Experienced)  
+Joe5029 (Idea Creator)  
+Davey is the Best (Learning, Participating)
