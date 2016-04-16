@@ -8,6 +8,7 @@ We'll add more information later, right now getting everything orginized.
   - Make a directory for data on users and storage
   - Have the bot respond
   - Check coding for no conflictions!
+
 2) Generate Ideas with Team for Improvements
 3) Contact Drew Mitchell for Sprites Use (optional)
   http://randompokemon.com/
