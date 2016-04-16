@@ -9,7 +9,7 @@ We'll add more information later, right now getting everything orginized.
   - Have the bot respond
   - Check coding for no conflictions!
 
-2) Generate Ideas with Team for Improvements
+2) Generate Ideas with Team for Improvements\n
 3) Contact Drew Mitchell for Sprites Use (optional)
   http://randompokemon.com/
 
