@@ -1,5 +1,5 @@
 # KantoBOT
-An Add-on to Red-Bot Utilizing the Economy Module using a Pokemon Themed Text-Based Game!
+An Add-on to [Red-Bot](https://github.com/GostOmega/Red-DiscordBot) Utilizing the Economy Module using a Pokemon Themed Text-Based Game!
 We'll add more information later, right now getting everything orginized.
 
 # Current Project Version: 0x0001
@@ -9,9 +9,10 @@ We'll add more information later, right now getting everything orginized.
   - Have the bot respond
   - Check coding for no conflictions!
 
-2) Generate Ideas with Team for Improvements\n
+2) Generate Ideas with Team for Improvements
+
 3) Contact Drew Mitchell for Sprites Use (optional)
-  http://randompokemon.com/
+  [His Webpage](http://randompokemon.com/)
 
 # Team
 GostOmega (Bot host, Experienced)
