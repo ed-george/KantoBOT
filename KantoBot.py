@@ -1,47 +1,51 @@
 import discord
 from discord.ext import commands
 from .utils.dataIO import fileIO
-from random import randint
-from copy import deepcopy
-from .utils import checks
-from __main__ import send_cmd_help
-from operator import settings as bot_settings
 import os
-import time
-#import logging
 
 """-----------------------------------------------------------------------------------------------------------------------------------
                                                           ||Store Data||
 -----------------------------------------------------------------------------------------------------------------------------------"""
 
-ECON_DIR = "data/economy/bank.json"
-#SPRITES = http://randompokemon.com/ (NEED TO CONTACT)
+DATA_FILE_PATH = "data/kantobot/"
+PC_FILE = "pc.json"
 
 """-----------------------------------------------------------------------------------------------------------------------------------
                                               || Start Creating Commands for the Bot ||
 -----------------------------------------------------------------------------------------------------------------------------------"""
 
 class Kanto:
-  """
-  Lets you catch random pokemon utilizing the economy cog.
-  Goal is to complete the PokeDex
-  You can purchase Pokeballs
-  """
+    """
+    Lets you catch random pokemon utilizing the economy cog.
+    Goal is to complete the PokeDex
+    You can purchase Pokeballs
+    """
   
-  def __int__(self,bot):
-    self.bot = bot
-    self.bal = fileIO(ECON_DIR, "load")
-    #self.pc = fileIO("data/KantoBot/pc/users.json", "load")  USE FOR FUTURE GOAL.
-  
-  @commands.group(name="pokemon", pass_context=True, no_pm=False)
-  async def _pokemon(self, ctx):
-    """ Shows all pokemon commands """
-    if ctx.invoked_subcommand is None:
-      await send_cmd_help(ctx)
-  
-  @_pokemon.command(pass_contex=True):
-  async def register():
-    """ Registers the user to become a pokemon trainer """
+    def __init__(self, bot):
+        self.bot = bot
+        self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
+
+    @commands.command()
+    async def isAlive(self):
+        """Test bot is alive!"""
+        await self.bot.say("Hello World!")
+
+    @commands.command(pass_context=True)
+    async def pokedex(self, ctx):
+        """Pokedex"""
+        author = ctx.message.author
+
+        for result in self.dex:
+            if result["id"] == author.name:
+                print("Pokedex found for " + author.name)
+                await self.bot.say(author.mention + " already has the Pokemon " + result["pokemon"])
+                return
+
+        print("No Pokedex found for " + author.name)
+        give_pokemon(self, author)
+        await self.bot.say("Your new journey starts here! " + author.mention + " is now a Trainer!")
+
+
     
 
 """-----------------------------------------------------------------------------------------------------------------------------------
@@ -49,25 +53,23 @@ class Kanto:
                                                 || Start of Background Check ||
 -----------------------------------------------------------------------------------------------------------------------------------"""
 
+def give_pokemon(self, author):
+    self.dex.append({"id" : author.name, "pokemon" : "derp"})
+    fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
+    self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
+
 def check_folders():
-  """ Check to see if all the directories are present
-  
-  Add folders here if needed for a new directory """
-  folders = ("data/KantoBot/", "data/KantoBot/pc/")
-  for folder in folders:
-    if not os.path.exsist(folder):
-      print("Building the directory " + folder + " ...")
-      os.makedir(folder)
+    if not os.path.exists(DATA_FILE_PATH):
+        print("Creating " + DATA_FILE_PATH + " folder...")
+        os.makedirs(DATA_FILE_PATH)
 
 def check_files():
-  """ Check to see if all the needed files are downloaded
-  
-  Add files here if needed for new file """
-  file = "data/KantoBot/pc/users.json"
-  if not fileIO(file, "check"):
-    print("Adding in empty users.json ...")
-    fileIO(file, "save", [])
+    f = DATA_FILE_PATH + PC_FILE
+    if not fileIO(f, "check"):
+        print("Creating empty " + PC_FILE + "...")
+        fileIO(f, "save", [])
 
 def setup(bot):
-  game = Kanto(bot)
-  bot.add_cog(game)
+    check_folders()
+    check_files()
+    bot.add_cog(Kanto(bot))
