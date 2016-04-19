@@ -3,7 +3,6 @@ from discord.ext import commands
 from .utils.dataIO import fileIO
 from time import ctime
 import os
-import json
 import random
 
 """-----------------------------------------------------------------------------------------------------------------------------------
@@ -95,7 +94,7 @@ def get_pokemon(self, number):
     return self.pokemon[number]
 
 def recieve_starter(self, user):
-    # STUB
+    # Default starters are 001, 004 and 007
     starter = random.choice(["1","4","7"])
     pokemon = get_pokemon(self, starter)
 
@@ -105,9 +104,14 @@ def recieve_starter(self, user):
 
     return pokemon["name"]
 
-
-def give_pokemon(self, user):
-    self.dex.append({"id" : user.name, "pokemon" : dict()})
+def give_pokemon(self, user, number):
+    pokemon = get_pokemon(self, number)
+    print("Checking user db")
+    for dex_user in self.dex:
+        if dex_user["id"] == user.name:
+            print(dex_user["pokemon"])
+            dex_user["pokemon"].append(pokemon)
+            break
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
 
