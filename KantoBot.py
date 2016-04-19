@@ -43,13 +43,16 @@ class Kanto:
         for result in self.dex:
             if result["id"] == user.name:
                 print("Pokedex found for " + user.name)
-                # TODO print pokemon
-                await self.bot.say(user.mention + " already has Pokemon")
+                dex_user = get_dex_user(self, user)
+                str = ""
+                for pokemon in dex_user["pokemon"]:
+                    str += get_pokemon(self, pokemon)["name"]
+                    str += " "
+                await self.bot.say(user.mention + " already has Pokemon: " + str)
                 return
 
         print("No Pokedex found for " + user.name)
         await create_user(self, ctx)
-
 
 
 """-----------------------------------------------------------------------------------------------------------------------------------
@@ -99,25 +102,30 @@ def get_pokemon(self, number):
         return self.pokemon["0"]
 
 def recieve_starter(self, user):
-    # Default starters are 001, 004 and 007
-    starter = random.choice(["1","4","7"])
+    # Default starters are 001, 004, 007, 025
+    starter = random.choice(["1","4","7","25"])
     pokemon = get_pokemon(self, starter)
-
+    # Save starter to file
     self.dex.append({"id": user.name, "pokemon": [starter]})
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
-
     return pokemon["name"]
 
-def give_pokemon(self, user, number):
-    pokemon = get_pokemon(self, number)
-    print("Checking user db")
+def get_dex_user(self, user):
     for dex_user in self.dex:
         if dex_user["id"] == user.name:
-            # Debug purposes
-            print(get_pokemon(self, number))
-            dex_user["pokemon"].append(number)
-            break
+            return dex_user
+        break
+    return None
+
+def give_pokemon(self, user, number):
+    dex_user = get_dex_user(self, user)
+    # Debug purposes
+    print("Giving pokemon to " + user.name)
+    print(get_pokemon(self, number))
+    dex_user["pokemon"].append(number)
+
+    print("Saving pokemon to user")
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
 
