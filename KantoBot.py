@@ -66,13 +66,13 @@ async def create_user(self, ctx):
 
     # Builders the @Trainer role.
     if 'Trainer' not in [role.name for role in server.roles]:
-        print("Creating Trainer role")
+        print("Creating channel wide role - Trainer")
         try:
             perms = discord.Permissions.none()
             await self.bot.create_role(server, name="Trainer", permissions=perms)
-            print("create role")
+            print("Role created")
         except discord.Forbidden as e:
-            print("Bot could not create Trainer role - Please check bot permissions")
+            print("Bot could not create Trainer role - Have you checked bot permissions?")
             print(e)
             await self.bot.say("Something went wrong " + user.mention + " please seek admin help.")
             return
@@ -81,7 +81,7 @@ async def create_user(self, ctx):
     role = discord.utils.get(ctx.message.server.roles, name="Trainer")
     if 'Trainer' not in [role.name for role in user.roles]:
         await self.bot.add_roles(user, role)
-        print("add role to " + user.name)
+        print("Gave Trainer role to " + user.name)
     else:
         print("Trainer role is already assigned to " + user.name)
 
@@ -91,14 +91,19 @@ async def create_user(self, ctx):
                        " is now a Trainer with their trusty partner " + starter + "!")
 
 def get_pokemon(self, number):
-    return self.pokemon[number]
+    if number in self.pokemon:
+        return self.pokemon[number]
+    else:
+        # Something went wrong - assign user MissingNo.
+        print("ERROR: No Pokemon found for number: " + number)
+        return self.pokemon["0"]
 
 def recieve_starter(self, user):
     # Default starters are 001, 004 and 007
     starter = random.choice(["1","4","7"])
     pokemon = get_pokemon(self, starter)
 
-    self.dex.append({"id" : user.name, "pokemon" : [pokemon]})
+    self.dex.append({"id": user.name, "pokemon": [starter]})
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
 
@@ -109,8 +114,9 @@ def give_pokemon(self, user, number):
     print("Checking user db")
     for dex_user in self.dex:
         if dex_user["id"] == user.name:
-            print(dex_user["pokemon"])
-            dex_user["pokemon"].append(pokemon)
+            # Debug purposes
+            print(get_pokemon(self, number))
+            dex_user["pokemon"].append(number)
             break
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
