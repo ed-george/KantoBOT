@@ -1,7 +1,9 @@
 import discord
 from discord.ext import commands
 from .utils.dataIO import fileIO
+from time import ctime
 import os
+import json
 import random
 
 """-----------------------------------------------------------------------------------------------------------------------------------
@@ -10,6 +12,7 @@ import random
 
 DATA_FILE_PATH = "data/kantobot/"
 PC_FILE = "pc.json"
+POKEMON_FILE = "pokemon.json"
 
 """-----------------------------------------------------------------------------------------------------------------------------------
                                               || Start Creating Commands for the Bot ||
@@ -23,9 +26,10 @@ class Kanto:
     """
   
     def __init__(self, bot):
-        print("-- Starting bot --")
+        print("-- Starting bot @ " + ctime() + " --")
         self.bot = bot
         self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
+        self.pokemon = fileIO(DATA_FILE_PATH + POKEMON_FILE, "load")
 
     @commands.command()
     async def isAlive(self):
@@ -83,17 +87,27 @@ async def create_user(self, ctx):
         print("Trainer role is already assigned to " + user.name)
 
     # replace with give starter
-    give_pokemon(self, user)
-    await self.bot.say("Your new journey starts here! " + user.mention + " is now a Trainer!")
+    starter = recieve_starter(self, user)
+    await self.bot.say("Your new journey starts here! " + user.mention +
+                       " is now a Trainer with their trusty partner " + starter + "!")
 
+def get_pokemon(self, number):
+    return self.pokemon[number]
 
-def give_starter(self, author):
+def recieve_starter(self, user):
     # STUB
     starter = random.choice(["1","4","7"])
+    pokemon = get_pokemon(self, starter)
+
+    self.dex.append({"id" : user.name, "pokemon" : [pokemon]})
+    fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
+    self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
+
+    return pokemon["name"]
 
 
-def give_pokemon(self, author):
-    self.dex.append({"id" : author.name, "pokemon" : dict()})
+def give_pokemon(self, user):
+    self.dex.append({"id" : user.name, "pokemon" : dict()})
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
 
@@ -106,6 +120,10 @@ def check_files():
     f = DATA_FILE_PATH + PC_FILE
     if not fileIO(f, "check"):
         print("Creating empty " + PC_FILE + "...")
+        fileIO(f, "save", [])
+    f = DATA_FILE_PATH + POKEMON_FILE
+    if not fileIO(f, "check"):
+        print("WARNING: Empty " + f)
         fileIO(f, "save", [])
 
 def setup(bot):
