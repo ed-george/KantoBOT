@@ -4,6 +4,7 @@ from .utils.dataIO import fileIO
 from time import ctime
 import os
 import random
+import asyncio
 
 """------------------------------------------------------------------------------------------------------------------
                                                           ||Store Data||
@@ -79,6 +80,7 @@ async def create_user(self, ctx):
             perms = discord.Permissions.none()
             await self.bot.create_role(server, name=BASE_ROLE_NAME, permissions=perms)
             print(BASE_ROLE_NAME + " role created")
+            await asyncio.sleep(1)
         except discord.Forbidden as e:
             # This exception can occur when the bot account does not have the relevant permissions
             print("Bot could not create " + BASE_ROLE_NAME + " role - Have you checked bot permissions?")
@@ -87,10 +89,10 @@ async def create_user(self, ctx):
             return
 
     # Gives user the Trainer role. Checks to see if they already have role.
-    role = discord.utils.get(server.roles, name=BASE_ROLE_NAME)
+    timeout_role = discord.utils.get(ctx.message.server.roles, name=BASE_ROLE_NAME)
     if BASE_ROLE_NAME not in [role.name for role in user.roles]:
         # Add role to user
-        await self.bot.add_roles(user, role)
+        await self.bot.add_roles(user, timeout_role)
         print("Gave " + BASE_ROLE_NAME + " role to " + user.name)
     else:
         # User already has role
