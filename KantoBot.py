@@ -5,18 +5,18 @@ from time import ctime
 import os
 import random
 
-"""-----------------------------------------------------------------------------------------------------------------------------------
+"""------------------------------------------------------------------------------------------------------------------
                                                           ||Store Data||
------------------------------------------------------------------------------------------------------------------------------------"""
+---------------------------------------------------------------------------------------------------------------------"""
 
 DATA_FILE_PATH = "data/kantobot/"
 PC_FILE = "pc.json"
 POKEMON_FILE = "pokemon.json"
 BASE_ROLE_NAME = "Trainer"
 
-"""-----------------------------------------------------------------------------------------------------------------------------------
+"""------------------------------------------------------------------------------------------------------------------
                                               || Start Creating Commands for the Bot ||
------------------------------------------------------------------------------------------------------------------------------------"""
+---------------------------------------------------------------------------------------------------------------------"""
 
 class Kanto:
     """
@@ -36,7 +36,7 @@ class Kanto:
         """Test bot is alive!"""
         await self.bot.say("Hello World!")
 
-    @commands.command(pass_context=True, no_pm=True)
+    @commands.command(pass_context=True, no_pm=False)
     async def pokedex(self, ctx):
         """Pokedex"""
         user = ctx.message.author
@@ -54,10 +54,10 @@ class Kanto:
         await create_user(self, ctx)
 
 
-"""-----------------------------------------------------------------------------------------------------------------------------------
+"""------------------------------------------------------------------------------------------------------------------
                                                       || End of Commands ||
                                                 || Start of Background Check ||
------------------------------------------------------------------------------------------------------------------------------------"""
+---------------------------------------------------------------------------------------------------------------------"""
 
 async def create_user(self, ctx):
     """
@@ -87,7 +87,7 @@ async def create_user(self, ctx):
             return
 
     # Gives user the Trainer role. Checks to see if they already have role.
-    role = discord.utils.get(ctx.message.server.roles, name=BASE_ROLE_NAME)
+    role = discord.utils.get(server.roles, name=BASE_ROLE_NAME)
     if BASE_ROLE_NAME not in [role.name for role in user.roles]:
         # Add role to user
         await self.bot.add_roles(user, role)
@@ -100,6 +100,7 @@ async def create_user(self, ctx):
     starter = receive_starter(self, user)
     await self.bot.say("Your new journey starts here! " + user.mention +
                        " is now a Trainer with their first trusty partner " + starter + "!")
+
 
 def get_pokemon(self, number):
     """
@@ -126,7 +127,7 @@ def receive_starter(self, user):
     starter = random.choice(["1", "4", "7", "25"])
     pokemon = get_pokemon(self, starter)
     # Save starter to file
-    self.dex.append({"id": user.name, "pokemon": [starter]})
+    self.dex.append({"id": user.name, "pokemon": [starter], "inventory": create_inventory()})
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     # Reload new dex to memory
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
@@ -134,6 +135,14 @@ def receive_starter(self, user):
     name = pokemon["name"]
     print("Assigned " + name + " as " + user.name + "'s starter")
     return name
+
+
+def create_inventory():
+    """
+    Create inventory
+    :return: Default inventory for users
+    """
+    return {"pokeball": 0, "greatball": 0, "ultraball": 0}
 
 def get_dex_user(self, user):
     """
