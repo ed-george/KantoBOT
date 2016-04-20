@@ -116,7 +116,7 @@ def get_pokemon(self, number):
     else:
         # Something went wrong - assign user a 'MissingNo.'
         print("ERROR: No Pokemon found for number: " + number)
-        return self.pokemon["0"]
+        return self.pokemon["000"]
 
 def receive_starter(self, user):
     """
@@ -126,7 +126,7 @@ def receive_starter(self, user):
     :return: The starter's name
     """
     # Get random choice from the starters
-    starter = random.choice(["1", "4", "7", "25"])
+    starter = random.choice(["001", "004", "007", "025"])
     pokemon = get_pokemon(self, starter)
     # Save starter to file
     self.dex.append({"id": user.name, "pokemon": [starter], "inventory": create_inventory()})
