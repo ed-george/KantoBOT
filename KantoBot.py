@@ -10,14 +10,19 @@ import asyncio
                                                           ||Store Data||
 ---------------------------------------------------------------------------------------------------------------------"""
 
+# TODO Move to settings
 DATA_FILE_PATH = "data/kantobot/"
 PC_FILE = "pc.json"
 POKEMON_FILE = "pokemon.json"
 BASE_ROLE_NAME = "Trainer"
 LOOT_COOL_OFF_HRS = 24
+POKE_BALL_FREQ = 1
+GREAT_BALL_FREQ = 3
+ULTRA_BALL_FREQ = 10
+MASTER_BALL_FREQ = 30
 
 # Constants
-HOUR_MILI = 3600
+HOUR_MILLI = 3600
 
 """------------------------------------------------------------------------------------------------------------------
                                               || Start Creating Commands for the Bot ||
@@ -68,10 +73,23 @@ class Kanto:
             return
         dex_user = get_dex_user(self, user)
         if can_claim_loot(dex_user):
-            # claim_loot(dex_user)
-            print(user.name + " can claim loot")
+            claim_loot(self, dex_user)
+            loot = get_formatted_loot(dex_user)
+            await self.bot.say("You got some loot! " + user.mention + loot)
+
         else:
-            await self.bot.say(user.mention + " you cannot claim your loot yet!")
+            await self.bot.say("Sorry " + user.mention + " you cannot claim your loot yet!")
+
+    @commands.command(pass_context=True, no_pm=False)
+    async def bag(self, ctx):
+        """Get bag contents"""
+        user = ctx.message.author
+        if not is_user_base_role(user):
+            await self.bot.say(user.mention + " you don't seem to be a Trainer yet!")
+            return
+        dex_user = get_dex_user(self, user)
+        loot = get_formatted_loot(dex_user)
+        await self.bot.say(user.mention + loot)
 
 """------------------------------------------------------------------------------------------------------------------
                                                       || End of Commands ||
@@ -167,7 +185,7 @@ def create_inventory():
     Create inventory
     :return: Default inventory for users
     """
-    return {"pokeball": 0, "greatball": 0, "ultraball": 0}
+    return {"pokeball": 0, "greatball": 0, "ultraball": 0, "masterball": 0}
 
 def create_loot():
     """
@@ -175,6 +193,15 @@ def create_loot():
     :return: Default loot status for users
     """
     return {"loot_count": 0, "last_collected": 0}
+
+def get_formatted_loot(dex_user):
+    inventory = dex_user["inventory"]
+    formatted_loot = " your bag contains "
+    formatted_loot += str(inventory["pokeball"]) + " Pokeball(s), "
+    formatted_loot += str(inventory["greatball"]) + " Greatball(s), "
+    formatted_loot += str(inventory["ultraball"]) + " Ultraball(s) "
+    formatted_loot += "and " + str(inventory["masterball"]) + " Masterball(s) "
+    return formatted_loot
 
 def get_dex_user(self, user):
     """
@@ -222,7 +249,37 @@ def can_claim_loot(dex_user):
     :return: true if claim is made after cool off period, false otherwise
     """
     now = int(time())
-    return (now - dex_user["loot"]["last_collected"]) >= int(LOOT_COOL_OFF_HRS * HOUR_MILI)
+    return (now - dex_user["loot"]["last_collected"]) >= int(LOOT_COOL_OFF_HRS * HOUR_MILLI)
+
+
+def claim_loot(self, dex_user):
+    print(dex_user["id"] + " claimed loot")
+    dex_user = add_loot(dex_user)
+    dex_user["loot"]["last_collected"] = int(time())
+    fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
+    # Reload information to memory
+    self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
+
+
+def add_loot(dex_user):
+    dex_user["loot"]["loot_count"] += 1
+    loot_count = dex_user["loot"]["loot_count"]
+    inventory = dex_user["inventory"]
+
+    if loot_count % POKE_BALL_FREQ == 0:
+        inventory["pokeball"] += 1
+
+    if loot_count % GREAT_BALL_FREQ == 0:
+        inventory["greatball"] += 1
+
+    if loot_count % ULTRA_BALL_FREQ == 0:
+        inventory["ultraball"] += 1
+
+    if loot_count % MASTER_BALL_FREQ == 0:
+        inventory["masterball"] += 1
+
+    dex_user["inventory"] = inventory
+    return dex_user
 
 def check_folders():
     """
