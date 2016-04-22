@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from .utils.dataIO import fileIO
-from time import ctime
+from time import ctime, time
 import os
 import random
 import asyncio
@@ -14,12 +14,17 @@ DATA_FILE_PATH = "data/kantobot/"
 PC_FILE = "pc.json"
 POKEMON_FILE = "pokemon.json"
 BASE_ROLE_NAME = "Trainer"
+LOOT_COOL_OFF_HRS = 24
+
+# Constants
+HOUR_MILI = 3600
 
 """------------------------------------------------------------------------------------------------------------------
                                               || Start Creating Commands for the Bot ||
 ---------------------------------------------------------------------------------------------------------------------"""
 
 class Kanto:
+
     """
     Lets you catch random pokemon utilizing the economy cog.
     Goal is to complete the PokeDex
@@ -33,7 +38,7 @@ class Kanto:
         self.pokemon = fileIO(DATA_FILE_PATH + POKEMON_FILE, "load")
 
     @commands.command()
-    async def isAlive(self):
+    async def isalive(self):
         """Test bot is alive!"""
         await self.bot.say("Hello World!")
 
@@ -44,16 +49,29 @@ class Kanto:
         dex_user = get_dex_user(self, user)
 
         if dex_user is not None:
-            str = ""
+            poke_list = ""
             for pokemon in dex_user["pokemon"]:
-                str += get_pokemon(self, pokemon)["name"]
-                str += " "
-            await self.bot.say(user.mention + " is travelling with " + str)
+                poke_list += get_pokemon(self, pokemon)["name"]
+                poke_list += " "
+            await self.bot.say(user.mention + " is travelling with " + poke_list)
             return
 
         print("No Pokedex found for " + user.name)
         await create_user(self, ctx)
 
+    @commands.command(pass_context=True, no_pm=False)
+    async def pokeloot(self, ctx):
+        """Pokeloot"""
+        user = ctx.message.author
+        if not is_user_base_role(user):
+            await self.bot.say(user.mention + " you don't seem to be a Trainer yet!")
+            return
+        dex_user = get_dex_user(self, user)
+        if can_claim_loot(dex_user):
+            # claim_loot(dex_user)
+            print(user.name + " can claim loot")
+        else:
+            await self.bot.say(user.mention + " you cannot claim your loot yet!")
 
 """------------------------------------------------------------------------------------------------------------------
                                                       || End of Commands ||
@@ -88,15 +106,15 @@ async def create_user(self, ctx):
             await self.bot.say("Something went wrong " + user.mention + " please seek admin help.")
             return
 
-    # Gives user the Trainer role. Checks to see if they already have role.
-    timeout_role = discord.utils.get(ctx.message.server.roles, name=BASE_ROLE_NAME)
-    if BASE_ROLE_NAME not in [role.name for role in user.roles]:
-        # Add role to user
-        await self.bot.add_roles(user, timeout_role)
-        print("Gave " + BASE_ROLE_NAME + " role to " + user.name)
-    else:
+    if is_user_base_role(user):
         # User already has role
         print(BASE_ROLE_NAME + " role is already assigned to " + user.name)
+    else:
+        # Add role to user
+        # Gives user the Trainer role. Checks to see if they already have role.
+        timeout_role = discord.utils.get(ctx.message.server.roles, name=BASE_ROLE_NAME)
+        await self.bot.add_roles(user, timeout_role)
+        print("Gave " + BASE_ROLE_NAME + " role to " + user.name)
 
     # Gives user random starter Pokemon
     starter = receive_starter(self, user)
@@ -118,6 +136,7 @@ def get_pokemon(self, number):
         print("ERROR: No Pokemon found for number: " + number)
         return self.pokemon["000"]
 
+
 def receive_starter(self, user):
     """
     Assigns a user one of 4 starter Pokemon
@@ -129,7 +148,11 @@ def receive_starter(self, user):
     starter = random.choice(["001", "004", "007", "025"])
     pokemon = get_pokemon(self, starter)
     # Save starter to file
-    self.dex.append({"id": user.name, "pokemon": [starter], "inventory": create_inventory()})
+    self.dex.append({"id": user.name,
+                     "pokemon": [starter],
+                     "inventory": create_inventory(),
+                     "loot": create_loot()}
+    )
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     # Reload new dex to memory
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
@@ -146,6 +169,13 @@ def create_inventory():
     """
     return {"pokeball": 0, "greatball": 0, "ultraball": 0}
 
+def create_loot():
+    """
+    Create loot collection information
+    :return: Default loot status for users
+    """
+    return {"loot_count": 0, "last_collected": 0}
+
 def get_dex_user(self, user):
     """
     Retrieves user information from info stored in memory
@@ -156,6 +186,14 @@ def get_dex_user(self, user):
         if dex_user["id"] == user.name:
             return dex_user
     return None
+
+def is_user_base_role(user):
+    """
+    Determins if a user has the base roll assigned to them
+    :param user: User to test for role
+    :return: true if role is assigned to user, false otherwise
+    """
+    return BASE_ROLE_NAME in [role.name for role in user.roles]
 
 def give_pokemon(self, user, number):
     """
@@ -176,6 +214,15 @@ def give_pokemon(self, user, number):
     fileIO(DATA_FILE_PATH + PC_FILE, "save", self.dex)
     # Reload information to memory
     self.dex = fileIO(DATA_FILE_PATH + PC_FILE, "load")
+
+def can_claim_loot(dex_user):
+    """
+    Check if loot can be claimed by user
+    :param dex_user: The user stored in memory
+    :return: true if claim is made after cool off period, false otherwise
+    """
+    now = int(time())
+    return (now - dex_user["loot"]["last_collected"]) >= int(LOOT_COOL_OFF_HRS * HOUR_MILI)
 
 def check_folders():
     """
