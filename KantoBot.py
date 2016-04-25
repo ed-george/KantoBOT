@@ -76,7 +76,6 @@ class Kanto:
             claim_loot(self, dex_user)
             loot = get_formatted_loot(dex_user)
             await self.bot.say("You got some loot! " + user.mention + loot)
-
         else:
             await self.bot.say("Sorry " + user.mention + " you cannot claim your loot yet!")
 
@@ -90,6 +89,20 @@ class Kanto:
         dex_user = get_dex_user(self, user)
         loot = get_formatted_loot(dex_user)
         await self.bot.say(user.mention + loot)
+
+
+    @commands.command(pass_context=True, no_pm=False)
+    async def pokeball(self, ctx):
+        user = ctx.message.author
+        if not is_user_base_role(user):
+            await self.bot.say(user.mention + " you don't seem to be a Trainer yet!")
+            return
+        dex_user = get_dex_user(self, user)
+        if check_has_item(dex_user, "pokeball"):
+           # Encounter occurs here
+            await self.bot.say(user.mention + " you don't have the items to do that!")
+        else:
+            await self.bot.say(user.mention + " you don't have the items to do that!")
 
 """------------------------------------------------------------------------------------------------------------------
                                                       || End of Commands ||
@@ -280,6 +293,10 @@ def add_loot(dex_user):
 
     dex_user["inventory"] = inventory
     return dex_user
+
+def check_has_item(dex_user, item):
+    inventory = dex_user["inventory"]
+    return inventory and inventory[item] > 0
 
 def check_folders():
     """
