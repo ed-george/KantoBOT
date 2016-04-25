@@ -99,8 +99,8 @@ class Kanto:
             return
         dex_user = get_dex_user(self, user)
         if check_has_item(dex_user, "pokeball"):
-           # Encounter occurs here
-            await self.bot.say(user.mention + " you don't have the items to do that!")
+            # Encounter occurs here
+            # random_encounter(self, dex_user, "pokeball")
         else:
             await self.bot.say(user.mention + " you don't have the items to do that!")
 
@@ -208,6 +208,11 @@ def create_loot():
     return {"loot_count": 0, "last_collected": 0}
 
 def get_formatted_loot(dex_user):
+    """
+    Get pretty printed loot for a user in memory
+    :param dex_user: User in memory
+    :return: Pretty printed string
+    """
     inventory = dex_user["inventory"]
     formatted_loot = " your bag contains "
     formatted_loot += str(inventory["pokeball"]) + " Pokeball(s), "
@@ -266,6 +271,11 @@ def can_claim_loot(dex_user):
 
 
 def claim_loot(self, dex_user):
+    """
+    Claim loot for a specific user in memory
+    :param dex_user: User in memory
+    :return:
+    """
     print(dex_user["id"] + " claimed loot")
     dex_user = add_loot(dex_user)
     dex_user["loot"]["last_collected"] = int(time())
@@ -275,10 +285,17 @@ def claim_loot(self, dex_user):
 
 
 def add_loot(dex_user):
+    """
+    Add loot to user in memory
+    :param dex_user: user in memory
+    :return: updated user
+    """
+    # Update the amount of times loot has been claimed
     dex_user["loot"]["loot_count"] += 1
     loot_count = dex_user["loot"]["loot_count"]
     inventory = dex_user["inventory"]
 
+    # Add balls depending on their frequency
     if loot_count % POKE_BALL_FREQ == 0:
         inventory["pokeball"] += 1
 
@@ -290,11 +307,17 @@ def add_loot(dex_user):
 
     if loot_count % MASTER_BALL_FREQ == 0:
         inventory["masterball"] += 1
-
+    # Update inventory
     dex_user["inventory"] = inventory
     return dex_user
 
 def check_has_item(dex_user, item):
+    """
+    Check if a user in memory has a specific item
+    :param dex_user: User in memory
+    :param item: Item string to check for
+    :return: true if item is found and at least 1 item is available. false otherwise.
+    """
     inventory = dex_user["inventory"]
     return inventory and inventory[item] > 0
 
