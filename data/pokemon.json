@@ -4,8 +4,8 @@
     "attack": 0,
     "defense": 0,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Struggle"
     ],
@@ -18,13 +18,13 @@
     "evolveLevel": 16,
     "evolveTo": "002",
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Tackle",
-	  "Growl",
-	  "Leech Seed",
+      "Growl",
+      "Leech Seed",
       "Vine Whip"
     ],
     "curve": 1.3,
@@ -41,13 +41,13 @@
     "evolveLevel": 32,
     "evolveTo": "003",
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Tackle",
       "Vine Whip",
-	  "Poison Powder",
+      "Poison Powder",
       "Razor Leaf"
     ],
     "curve": 1.3
@@ -57,14 +57,14 @@
     "attack": 82,
     "defense": 83,
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Vine Whip",
       "Razor Leaf",
       "Sleep Powder",
-	  "Solar Beam"
+      "Solar Beam"
     ],
     "curve": 1.3
   },
@@ -75,8 +75,8 @@
     "evolveLevel": 16,
     "evolveTo": "005",
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Scratch",
       "Growl",
@@ -96,8 +96,8 @@
     "evolveLevel": 36,
     "evolveTo": "006",
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Scratch",
       "Ember",
@@ -111,9 +111,9 @@
     "attack": 84,
     "defense": 78,
     "type": [
-		"FIRE",
-		"FLYING"
-	],
+      "FIRE",
+      "FLYING"
+    ],
     "moves": [
       "Rage",
       "Slash",
@@ -129,11 +129,11 @@
     "evolveLevel": 16,
     "evolveTo": "008",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Tackle",
-	  "Tail Whip",
+      "Tail Whip",
       "Bubble",
       "Water Gun"
     ],
@@ -151,8 +151,8 @@
     "evolveLevel": 36,
     "evolveTo": "009",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Tackle",
       "Bubble",
@@ -166,8 +166,8 @@
     "attack": 83,
     "defense": 100,
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Water Gun",
       "Bite",
@@ -183,11 +183,11 @@
     "evolveLevel": 7,
     "evolveTo": "011",
     "type": [
-		"BUG"
-	],
+      "BUG"
+    ],
     "moves": [
       "Tackle",
-	  "String Shot"
+      "String Shot"
     ],
     "curve": 1.6,
     "levels": [
@@ -197,29 +197,29 @@
     "probability": 15
   },
   "011": {
-	"name": "Metapod",
-	"attack": 20,
-	"defense": 55,
-	"evolveLevel": 10,
-	"evolveTo": "012",
-	"type": [
-		"BUG"
-	],
-	"moves": [
-		"Tackle",
-		"String Shot",
-		"Harden"
-	],
-	"curve": 1.6
+    "name": "Metapod",
+    "attack": 20,
+    "defense": 55,
+    "evolveLevel": 10,
+    "evolveTo": "012",
+    "type": [
+      "BUG"
+    ],
+    "moves": [
+      "Tackle",
+      "String Shot",
+      "Harden"
+    ],
+    "curve": 1.6
   },
   "012": {
     "name": "Butterfree",
     "attack": 45,
     "defense": 50,
     "type": [
-		"BUG",
-		"FLYING"
-	],
+      "BUG",
+      "FLYING"
+    ],
     "moves": [
       "Confusion",
       "Supersonic",
@@ -235,12 +235,12 @@
     "evolveLevel": 7,
     "evolveTo": "014",
     "type": [
-		"BUG",
-		"POISON"
-	],
+      "BUG",
+      "POISON"
+    ],
     "moves": [
       "Poison Sting",
-	  "String Shot"
+      "String Shot"
     ],
     "curve": 1.6,
     "levels": [
@@ -250,37 +250,37 @@
     "probability": 15
   },
   "014": {
-	"name": "Kakuna",
-	"attack": 25,
-	"defense": 50,
-	"evolveLevel": 10,
-	"evolveTo": "015",
-	"type": [
-		"BUG",
-		"POISON"
-	],
-	"moves": [
-		"Poison Sting",
-		"String Shot",
-		"Harden"
-	],
-	"curve": 1.6
+    "name": "Kakuna",
+    "attack": 25,
+    "defense": 50,
+    "evolveLevel": 10,
+    "evolveTo": "015",
+    "type": [
+      "BUG",
+      "POISON"
+    ],
+    "moves": [
+      "Poison Sting",
+      "String Shot",
+      "Harden"
+    ],
+    "curve": 1.6
   },
   "015": {
-	"name": "Beedrill",
-	"attack": 80,
-	"defense": 40,
-	"type": [
-		"BUG",
-		"POISON"
-	],
-	"moves": [
-		"Fury Attack",
-		"Twineedle",
-		"Rage",
-		"Pin Missile"
-	],
-	"curve": 1.6
+    "name": "Beedrill",
+    "attack": 80,
+    "defense": 40,
+    "type": [
+      "BUG",
+      "POISON"
+    ],
+    "moves": [
+      "Fury Attack",
+      "Twineedle",
+      "Rage",
+      "Pin Missile"
+    ],
+    "curve": 1.6
   },
   "016": {
     "name": "Pidgey",
@@ -289,12 +289,12 @@
     "evolveLevel": 18,
     "evolveTo": "017",
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Gust",
-	  "Sand-Attack",
+      "Sand-Attack",
       "Quick Attack"
     ],
     "curve": 1.3,
@@ -311,12 +311,12 @@
     "evolveLevel": 36,
     "evolveTo": "018",
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Gust",
-	  "Quick Attack",
+      "Quick Attack",
       "Whirlwind",
       "Wing Attack"
     ],
@@ -327,14 +327,14 @@
     "attack": 80,
     "defense": 75,
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Gust",
       "Quick Attack",
       "Wing Attack",
-	  "Mirror Move
+      "Mirror Move
     ],
     "curve": 1.3
   },
@@ -345,12 +345,12 @@
     "evolveLevel": 20,
     "evolveTo": "020",
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Tackle",
-	  "Tail Whip",
-	  "Quick Attack",
+      "Tail Whip",
+      "Quick Attack",
       "Hyper Fang"
     ],
     "curve": 1.6,
@@ -365,13 +365,13 @@
     "attack": 81,
     "defense": 60,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Quick Attack",
       "Hyper Fang",
-	  "Focus Energy",
-	  "Super Fang"
+      "Focus Energy",
+      "Super Fang"
     ],
     "curve": 1.6
   },
@@ -382,14 +382,14 @@
     "evolveLevel": 20,
     "evolveTo": "022",
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Peck",
-	  "Growl",
-	  "Leer",
-	  "Fury Attack"
+      "Growl",
+      "Leer",
+      "Fury Attack"
     ],
     "curve": 1.6,
     "levels": [
@@ -403,14 +403,14 @@
     "attack": 90,
     "defense": 65,
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Fury Attack",
-	  "Mirror Move",
+      "Mirror Move",
       "Drill Peck",
-	  "Agility"
+      "Agility"
     ],
     "curve": 1.6
   },
@@ -421,12 +421,12 @@
     "evolveLevel": 22,
     "evolveTo": "024",
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Wrap",
-	  "Leer",
-	  "Poison Sting",
+      "Leer",
+      "Poison Sting",
       "Bite"
     ],
     "curve": 1.6,
@@ -441,12 +441,12 @@
     "attack": 85,
     "defense": 69,
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Poison Sting",
       "Bite",
-	  "Glare",
+      "Glare",
       "Acid"
     ],
     "curve": 1.6
@@ -455,31 +455,31 @@
     "name": "Pikachu",
     "attack": 55,
     "defense": 30,
-	"evolveItem": "Thunder Stone",
-	"evolveTo": "026",
+    "evolveItem": "Thunder Stone",
+    "evolveTo": "026",
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Thunder Shock",
       "Thunder Wave",
       "Quick Attack",
-	  "Thunder"
+      "Thunder"
     ],
     "curve": 1.6,
-	"probability": 15
+    "probability": 15
   },
   "026": {
     "name": "Raichu",
     "attack": 90,
     "defense": 55,
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Quick Attack",
-	  "Slam",
-	  "Thunderbolt",
+      "Slam",
+      "Thunderbolt",
       "Thunder"
     ],
     "curve": 1.6
@@ -491,11 +491,11 @@
     "evolveLevel": 22,
     "evolveTo": "028",
     "type": [
-		"GROUND"
-	],
+      "GROUND"
+    ],
     "moves": [
       "Scratch",
-	  "Sand-Attack",
+      "Sand-Attack",
       "Slash"
     ],
     "curve": 1.6,
@@ -510,13 +510,13 @@
     "attack": 100,
     "defense": 110,
     "type": [
-		"GROUND"
-	],
+      "GROUND"
+    ],
     "moves": [
       "Slash",
       "Poison Sting",
       "Swift",
-	  "Fury Swipes"
+      "Fury Swipes"
     ],
     "curve": 1.6
   },
@@ -527,13 +527,13 @@
     "evolveLevel": 16,
     "evolveTo": "030",
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Growl",
-	  "Tackle",
-	  "Scratch",
-	  "Poison Sting"
+      "Tackle",
+      "Scratch",
+      "Poison Sting"
     ],
     "curve": 1.3,
     "levels": [
@@ -549,11 +549,11 @@
     "evolveItem": "Moon Stone",
     "evolveTo": "031",
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Poison Sting",
-	  "Bite",
+      "Bite",
       "Fury Swipes",
       "Double Kick"
     ],
@@ -564,13 +564,13 @@
     "attack": 82,
     "defense": 87,
     "type": [
-		"POISON",
-		"GROUND"
-	],
+      "POISON",
+      "GROUND"
+    ],
     "moves": [
       "Scratch",
       "Poison Sting",
-	  "Double Kick",
+      "Double Kick",
       "Body Slam"
     ],
     "curve": 1.3
@@ -582,13 +582,13 @@
     "evolveLevel": 16,
     "evolveTo": "033",
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Leer",
-	  "Tackle",
-	  "Horn Attack",
-	  "Poison Sting"
+      "Tackle",
+      "Horn Attack",
+      "Poison Sting"
     ],
     "curve": 1.3,
     "levels": [
@@ -604,11 +604,11 @@
     "evolveItem": "Moon Stone",
     "evolveTo": "034",
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Poison Sting",
-	  "Fury Attack",
+      "Fury Attack",
       "Horn Drill",
       "Double Kick"
     ],
@@ -619,13 +619,13 @@
     "attack": 92,
     "defense": 77,
     "type": [
-		"POISON",
-		"GROUND"
-	],
+      "POISON",
+      "GROUND"
+    ],
     "moves": [
       "Horn Attack",
       "Poison Sting",
-	  "Double Kick",
+      "Double Kick",
       "Thrash"
     ],
     "curve": 1.3
@@ -637,12 +637,12 @@
     "evolveItem": "Moon Stone",
     "evolveTo": "036",
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Pound",
       "Sing",
-	  "Double Slap",
+      "Double Slap",
       "Metronome"
     ],
     "curve": 1.6
@@ -652,12 +652,12 @@
     "attack": 70,
     "defense": 73,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Pound",
       "Sing",
-	  "Double Slap",
+      "Double Slap",
       "Metronome"
     ],
     "curve": 1.6
@@ -669,12 +669,12 @@
     "evolveItem": "Fire Stone",
     "evolveTo": "038",
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Quick Attack",
       "Confuse Ray",
-	  "Flamethrower",
+      "Flamethrower",
       "Fire Spin"
     ],
     "curve": 1.6
@@ -684,13 +684,13 @@
     "attack": 76,
     "defense": 75,
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Ember",
-	  "Quick Attack",
-	  "Flamethrower",
-	  "Fire Spin"
+      "Quick Attack",
+      "Flamethrower",
+      "Fire Spin"
     ],
     "curve": 1.6
   },
@@ -701,12 +701,12 @@
     "evolveItem": "Moon Stone",
     "evolveTo": "040",
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Sing",
       "Disable",
-	  "Defense Curl",
+      "Defense Curl",
       "Double Slap"
     ],
     "curve": 1.6
@@ -716,12 +716,12 @@
     "attack": 70,
     "defense": 45,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Pound",
       "Rest",
-	  "Body Slam",
+      "Body Slam",
       "Double-edge"
     ],
     "curve": 1.6
@@ -733,14 +733,14 @@
     "evolveLevel": 22,
     "evolveTo": "042",
     "type": [
-		"POISON",
-		"FLYING"
-	],
+      "POISON",
+      "FLYING"
+    ],
     "moves": [
       "Leech Life",
       "Supersonic",
       "Bite",
-	  "Confuse Ray"
+      "Confuse Ray"
     ],
     "curve": 1.6,
     "levels": [
@@ -754,9 +754,9 @@
     "attack": 80,
     "defense": 70,
     "type": [
-		"POISON",
-		"FLYING"
-	],
+      "POISON",
+      "FLYING"
+    ],
     "moves": [
       "Bite",
       "Confuse Ray",
@@ -772,14 +772,14 @@
     "evolveLevel": 21,
     "evolveTo": "044",
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Absorb",
-	  "Poison Powder",
-	  "Stun Spore",
-	  "Sleep Powder"
+      "Poison Powder",
+      "Stun Spore",
+      "Sleep Powder"
     ],
     "curve": 1.3,
     "levels": [
@@ -795,14 +795,14 @@
     "evolveItem": "Leaf Stone",
     "evolveTo": "045",
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Absorb",
-	  "Acid",
-	  "Pteal Dance",
-	  "Solar Beam"
+      "Acid",
+      "Pteal Dance",
+      "Solar Beam"
     ],
     "curve": 1.3
   },
@@ -811,14 +811,14 @@
     "attack": 80,
     "defense": 85,
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Absorb",
-	  "Acid",
-	  "Pteal Dance",
-	  "Solar Beam"
+      "Acid",
+      "Pteal Dance",
+      "Solar Beam"
     ],
     "curve": 1.3
   },
@@ -829,13 +829,13 @@
     "evolveLevel": 24,
     "evolveTo": "047",
     "type": [
-		"BUG",
-		"GRASS"
-	],
+      "BUG",
+      "GRASS"
+    ],
     "moves": [
       "Scratch",
-	  "Stun Spore",
-	  "Leech Life"
+      "Stun Spore",
+      "Leech Life"
     ],
     "curve": 1.6,
     "levels": [
@@ -849,14 +849,14 @@
     "attack": 95,
     "defense": 80,
     "type": [
-		"BUG",
-		"GRASS"
-	],
+      "BUG",
+      "GRASS"
+    ],
     "moves": [
       "Leech Life",
       "Spore",
-	  "Slash",
-	  "Growth"
+      "Slash",
+      "Growth"
     ],
     "curve": 1.6
   },
@@ -867,14 +867,14 @@
     "evolveLevel": 31,
     "evolveTo": "049",
     "type": [
-		"BUG",
-		"POISON"
-	],
+      "BUG",
+      "POISON"
+    ],
     "moves": [
       "Tackle",
       "Disable",
-	  "Poison Powder",
-	  "Leech Life"
+      "Poison Powder",
+      "Leech Life"
     ],
     "curve": 1.6,
     "levels": [
@@ -888,9 +888,9 @@
     "attack": 65,
     "defense": 60,
     "type": [
-		"BUG",
-		"POISON"
-	],
+      "BUG",
+      "POISON"
+    ],
     "moves": [
       "Leech Life",
       "Psybeam",
@@ -906,13 +906,13 @@
     "evolveLevel": 26,
     "evolveTo": "051",
     "type": [
-		"GROUND"
-	],
+      "GROUND"
+    ],
     "moves": [
       "Scratch",
-	  "Growl",
-	  "Dig",
-	  "Sand-Attack"
+      "Growl",
+      "Dig",
+      "Sand-Attack"
     ],
     "curve": 1.6,
     "levels": [
@@ -926,11 +926,11 @@
     "attack": 80,
     "defense": 50,
     "type": [
-		"GROUND"
-	],
+      "GROUND"
+    ],
     "moves": [
       "Scratch",
-	  "Dig"
+      "Dig"
       "Slash",
       "Earthquake"
     ],
@@ -943,13 +943,13 @@
     "evolveLevel": 28,
     "evolveTo": "053",
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Scratch",
       "Bite",
-	  "Pay Day",
-	  "Screech"
+      "Pay Day",
+      "Screech"
     ],
     "curve": 1.6,
     "levels": [
@@ -963,12 +963,12 @@
     "attack": 70,
     "defense": 60,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Bite",
-	  "Pay Day",
-	  "Fury Swipes",
+      "Pay Day",
+      "Fury Swipes",
       "Slash"
     ],
     "curve": 1.6
@@ -980,12 +980,12 @@
     "evolveLevel": 33,
     "evolveTo": "055",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Scratch",
       "Tail Whip",
-	  "Disable"
+      "Disable"
     ],
     "curve": 1.6,
     "levels": [
@@ -999,12 +999,12 @@
     "attack": 82,
     "defense": 78,
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Scratch",
       "Confusion",
-	  "Fury Swipes",
+      "Fury Swipes",
       "Hydro Pump"
     ],
     "curve": 1.6
@@ -1016,13 +1016,13 @@
     "evolveLevel": 28,
     "evolveTo": "057",
     "type": [
-		"FIGHTING"
-	],
+      "FIGHTING"
+    ],
     "moves": [
       "Scratch",
       "Karate Chop",
       "Fury Swipes",
-	  "Focus Energy"
+      "Focus Energy"
     ],
     "curve": 1.6,
     "levels": [
@@ -1036,8 +1036,8 @@
     "attack": 105,
     "defense": 60,
     "type": [
-		"FIGHTING"
-	],
+      "FIGHTING"
+    ],
     "moves": [
       "Karate Chop",
       "Fury Swipes",
@@ -1053,13 +1053,13 @@
     "evolveItem": "Fire Stone",
     "evolveTo": "059",
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Bite",
       "Ember",
       "Take Down",
-	  "Flamethrower"
+      "Flamethrower"
     ],
     "curve": 1,
     "levels": [
@@ -1073,13 +1073,13 @@
     "attack": 110,
     "defense": 80,
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Bite",
       "Ember",
-	  "Take Down",
-	  "Flamethrower"
+      "Take Down",
+      "Flamethrower"
     ],
     "curve": 1
   },
@@ -1090,11 +1090,11 @@
     "evolveLevel": 25,
     "evolveTo": "061",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Bubble",
-	  "Hypnosis",
+      "Hypnosis",
       "Water Gun"
     ],
     "curve": 1.3,
@@ -1111,13 +1111,13 @@
     "evolveItem": "Water Stone",
     "evolveTo": "062",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Water Gun",
-	  "Double Slap",
-	  "Body Slam",
-	  "Hydro Pump"
+      "Double Slap",
+      "Body Slam",
+      "Hydro Pump"
     ],
     "curve": 1.3
   },
@@ -1126,14 +1126,14 @@
     "attack": 85,
     "defense": 95,
     "type": [
-		"WATER",
-		"FIGHTING"
-	],
+      "WATER",
+      "FIGHTING"
+    ],
     "moves": [
       "Body Slam",
-	  "Water Gun",
-	  "Hypnosis",
-	  "Hydro Pump"
+      "Water Gun",
+      "Hypnosis",
+      "Hydro Pump"
     ],
     "curve": 1.3
   },
@@ -1144,8 +1144,8 @@
     "evolveLevel": 16,
     "evolveTo": "064",
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Teleport"
     ],
@@ -1163,13 +1163,13 @@
     "evolveItem": "Trade",
     "evolveTo": "065",
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Confusion",
-	  "Disable"
-	  "Psybeam",
-	  "Psychic"
+      "Disable"
+      "Psybeam",
+      "Psychic"
     ],
     "curve": 1.3
   },
@@ -1178,13 +1178,13 @@
     "attack": 50,
     "defense": 45,
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Confusion",
-	  "Psybeam",
-	  "Recover",
-	  "Psychic"
+      "Psybeam",
+      "Recover",
+      "Psychic"
     ],
     "curve": 1.3
   },
@@ -1195,12 +1195,12 @@
     "evolveLevel": 28,
     "evolveTo": "067",
     "type": [
-		"FIGHTING"
-	],
+      "FIGHTING"
+    ],
     "moves": [
       "Karate Chop",
-	  "Low Kick",
-	  "Leer"
+      "Low Kick",
+      "Leer"
     ],
     "curve": 1.3,
     "levels": [
@@ -1213,11 +1213,11 @@
     "name": "Machoke",
     "attack": 100,
     "defense": 70,
-	"evolveItem": "Trade",
-	"evolveTo": "068",
+    "evolveItem": "Trade",
+    "evolveTo": "068",
     "type": [
-		"FIGHTING"
-	],
+      "FIGHTING"
+    ],
     "moves": [
       "Low Kick",
       "Focus Energy",
@@ -1231,8 +1231,8 @@
     "attack": 130,
     "defense": 80,
     "type": [
-		"FIGHTING"
-	],
+      "FIGHTING"
+    ],
     "moves": [
       "Low Kick",
       "Focus Energy",
@@ -1248,14 +1248,14 @@
     "evolveLevel": 21,
     "evolveTo": "070",
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Vine Whip",
-	  "Wrap",
-	  "Poison Powder",
-	  "Sleep Powder"
+      "Wrap",
+      "Poison Powder",
+      "Sleep Powder"
     ],
     "curve": 1.3,
     "levels": [
@@ -1271,14 +1271,14 @@
     "evolveItem": "Leaf Stone",
     "evolveTo": "071",
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Stun Spore",
-	  "Acid",
-	  "Razor Leaf",
-	  "Slam"
+      "Acid",
+      "Razor Leaf",
+      "Slam"
     ],
     "curve": 1.3
   },
@@ -1287,14 +1287,14 @@
     "attack": 105,
     "defense": 65,
     "type": [
-		"GRASS",
-		"POISON"
-	],
+      "GRASS",
+      "POISON"
+    ],
     "moves": [
       "Vine Whip",
-	  "Acid",
-	  "Razor Leaf",
-	  "Slam"
+      "Acid",
+      "Razor Leaf",
+      "Slam"
     ],
     "curve": 1.3
   },
@@ -1305,9 +1305,9 @@
     "evolveLevel": 30,
     "evolveTo": "073",
     "type": [
-		"WATER",
-		"POISON"
-	],
+      "WATER",
+      "POISON"
+    ],
     "moves": [
       "Wrap",
       "Poison Sting",
@@ -1326,9 +1326,9 @@
     "attack": 70,
     "defense": 65,
     "type": [
-		"WATER",
-		"POISON"
-	],
+      "WATER",
+      "POISON"
+    ],
     "moves": [
       "Supersonic",
       "Water Gun",
@@ -1344,14 +1344,14 @@
     "evolveLevel": 25,
     "evolveTo": "075",
     "type": [
-		"ROCK",
-		"GROUND"
-	],
+      "ROCK",
+      "GROUND"
+    ],
     "moves": [
       "Tackle",
       "Defense Curl",
-	  "Rock Throw",
-	  "Self-Destruct"
+      "Rock Throw",
+      "Self-Destruct"
     ],
     "curve": 1.3,
     "levels": [
@@ -1367,14 +1367,14 @@
     "evolveItem": "Trade",
     "evolveTo": "076",
     "type": [
-		"ROCK",
-		"GROUND"
-	],
+      "ROCK",
+      "GROUND"
+    ],
     "moves": [
       "Rock Throw",
       "Self-Destruct",
-	  "Earthquake",
-	  "Explosion"
+      "Earthquake",
+      "Explosion"
     ],
     "curve": 1.3
   },
@@ -1383,14 +1383,14 @@
     "attack": 110,
     "defense": 130,
     "type": [
-		"ROCK",
-		"GROUND"
-	],
+      "ROCK",
+      "GROUND"
+    ],
     "moves": [
       "Rock Throw",
       "Harden",
-	  "Earthquake",
-	  "Explosion"
+      "Earthquake",
+      "Explosion"
     ],
     "curve": 1.3
   },
@@ -1401,13 +1401,13 @@
     "evolveLevel": 40,
     "evolveTo": "078",
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Ember",
       "Stomp",
-	  "Growl",
-	  "Fire Spin"
+      "Growl",
+      "Fire Spin"
     ],
     "curve": 1.6,
     "levels": [
@@ -1421,13 +1421,13 @@
     "attack": 100,
     "defense": 70,
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Ember",
       "Stomp",
       "Fire Spin",
-	  "Take Down"
+      "Take Down"
     ],
     "curve": 1.6
   },
@@ -1438,9 +1438,9 @@
     "evolveLevel": 37,
     "evolveTo": "080",
     "type": [
-		"WATER",
-		"PSYCHIC"
-	],
+      "WATER",
+      "PSYCHIC"
+    ],
     "moves": [
       "Confusion",
       "Disable",
@@ -1459,9 +1459,9 @@
     "attack": 75,
     "defense": 110,
     "type": [
-		"WATER",
-		"PSYCHIC"
-	],
+      "WATER",
+      "PSYCHIC"
+    ],
     "moves": [
       "Headbutt",
       "Water Gun",
@@ -1477,13 +1477,13 @@
     "evolveLevel": 30,
     "evolveTo": "082",
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Tackle",
       "Sonic Boom",
       "Thunder Shock",
-	  "Supersonic"
+      "Supersonic"
     ],
     "curve": 1.6,
     "levels": [
@@ -1497,8 +1497,8 @@
     "attack": 60,
     "defense": 95,
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Sonic Boom",
       "Supersonic",
@@ -1512,13 +1512,13 @@
     "attack": 65,
     "defense": 55,
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Peck",
-	  "Fury Attack",
-	  "Agility",
+      "Fury Attack",
+      "Agility",
       "Slash"
     ],
     "curve": 1.6,
@@ -1535,14 +1535,14 @@
     "evolveLevel": 31,
     "evolveTo": "085",
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Peck",
-	  "Growl",
-	  "Fury Attack",
-	  "Drill Peck"
+      "Growl",
+      "Fury Attack",
+      "Drill Peck"
     ],
     "curve": 1.6,
     "levels": [
@@ -1556,14 +1556,14 @@
     "attack": 110,
     "defense": 70,
     "type": [
-		"NORMAL",
-		"FLYING"
-	],
+      "NORMAL",
+      "FLYING"
+    ],
     "moves": [
       "Fury Attack",
       "Drill Peck",
-	  "Rage",
-	  "Tri Attack"
+      "Rage",
+      "Tri Attack"
     ],
     "curve": 1.6
   },
@@ -1574,11 +1574,11 @@
     "evolveLevel": 34,
     "evolveTo": "087",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Headbutt",
-	  "Growl"
+      "Growl"
     ],
     "curve": 1.6,
     "levels": [
@@ -1592,9 +1592,9 @@
     "attack": 70,
     "defense": 80,
     "type": [
-		"WATER",
-		"ICE"
-	],
+      "WATER",
+      "ICE"
+    ],
     "moves": [
       "Aurora Beam",
       "Rest",
@@ -1610,12 +1610,12 @@
     "evolveLevel": 38,
     "evolveTo": "089",
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Pound",
-	  "Disable",
-	  "Poison Gas",
+      "Disable",
+      "Poison Gas",
       "Sludge"
     ],
     "curve": 1.6,
@@ -1630,13 +1630,13 @@
     "attack": 105,
     "defense": 75,
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Disable",
       "Poison Gas",
       "Sludge",
-	  "Acid Armor"
+      "Acid Armor"
     ],
     "curve": 1.6
   },
@@ -1647,12 +1647,12 @@
     "evolveItem": "Water Stone",
     "evolveTo": "091",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Tackle",
-	  "Supersonic",
-	  "Clamp",
+      "Supersonic",
+      "Clamp",
       "Aurora Beam"
     ],
     "curve": 1,
@@ -1667,14 +1667,14 @@
     "attack": 95,
     "defense": 180,
     "type": [
-		"WATER",
-		"ICE"
-	],
+      "WATER",
+      "ICE"
+    ],
     "moves": [
       "Clamp",
-	  "Aurora Beam",
-	  "Ice Beam",
-	  "Spike Cannon"
+      "Aurora Beam",
+      "Ice Beam",
+      "Spike Cannon"
     ],
     "curve": 1
   },
@@ -1685,13 +1685,13 @@
     "evolveLevel": 25,
     "evolveTo": "093",
     "type": [
-		"GHOST",
-		"POISON"
-	],
+      "GHOST",
+      "POISON"
+    ],
     "moves": [
       "Lick",
       "Confuse Ray",
-	  "Night Shade"
+      "Night Shade"
     ],
     "curve": 1.3,
     "levels": [
@@ -1707,14 +1707,14 @@
     "evolveItem": "Trade",
     "evolveTo": "094",
     "type": [
-		"GHOST",
-		"POISON"
-	],
+      "GHOST",
+      "POISON"
+    ],
     "moves": [
       "Confuse Ray",
-	  "Night Shade",
-	  "Hypnosis",
-	  "Dream Eater"
+      "Night Shade",
+      "Hypnosis",
+      "Dream Eater"
     ],
     "curve": 1.3
   },
@@ -1723,14 +1723,14 @@
     "attack": 65,
     "defense": 60,
     "type": [
-		"GHOST",
-		"POISON"
-	],
+      "GHOST",
+      "POISON"
+    ],
     "moves": [
       "Confuse Ray",
-	  "Night Shade",
-	  "Hypnosis",
-	  "Dream Eater"
+      "Night Shade",
+      "Hypnosis",
+      "Dream Eater"
     ],
     "curve": 1.3
   },
@@ -1739,9 +1739,9 @@
     "attack": 45,
     "defense": 160,
     "type": [
-		"ROCK",
-		"GROUND"
-	],
+      "ROCK",
+      "GROUND"
+    ],
     "moves": [
       "Bind",
       "Rock Throw",
@@ -1762,11 +1762,11 @@
     "evolveLevel": 26,
     "evolveTo": "097",
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Hypnosis",
-	  "Disable",
+      "Disable",
       "Confusion",
       "Headbutt"
     ],
@@ -1782,8 +1782,8 @@
     "attack": 73,
     "defense": 70,
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Confusion",
       "Headbutt",
@@ -1799,13 +1799,13 @@
     "evolveLevel": 28,
     "evolveTo": "099",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Bubble",
-	  "Leer",
+      "Leer",
       "Vice Grip",
-	  "Guillotine"
+      "Guillotine"
     ],
     "curve": 1.6,
     "levels": [
@@ -1819,11 +1819,11 @@
     "attack": 130,
     "defense": 115,
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Vice Grip",
-	  "Guilotine",
+      "Guilotine",
       "Stomp",
       "Crabhammer"
     ],
@@ -1836,13 +1836,13 @@
     "evolveLevel": 30,
     "evolveTo": "101",
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Tackle",
-	  "Screech",
+      "Screech",
       "Sonic Boom",
-	  "Self-Destruct"
+      "Self-Destruct"
     ],
     "curve": 1.6,
     "levels": [
@@ -1856,11 +1856,11 @@
     "attack": 50,
     "defense": 70,
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Sonic Boom",
-	  "Self-Destruct",
+      "Self-Destruct",
       "Swift",
       "Explosion"
     ],
@@ -1873,14 +1873,14 @@
     "evolveItem": "Leaf Stone",
     "evolveTo": "103",
     "type": [
-		"GRASS",
-		"PSYCHIC"
-	],
+      "GRASS",
+      "PSYCHIC"
+    ],
     "moves": [
       "Barrage",
-	  "Hypnosis",
+      "Hypnosis",
       "Reflect",
-	  "Leech Seed"
+      "Leech Seed"
     ],
     "curve": 1.6,
     "levels": [
@@ -1894,12 +1894,12 @@
     "attack": 95,
     "defense": 85,
     "type": [
-		"GRASS",
-		"PSYCHIC"
-	],
+      "GRASS",
+      "PSYCHIC"
+    ],
     "moves": [
       "Hypnosis",
-	  "Stomp",
+      "Stomp",
       "Solar Beam",
       "Sleep Powder"
     ],
@@ -1912,13 +1912,13 @@
     "evolveLevel": 28,
     "evolveTo": "105",
     "type": [
-		"GROUND"
-	],
+      "GROUND"
+    ],
     "moves": [
       "Bone Club",
       "Growl",
-	  "Leer"
-	  ],
+      "Leer"
+    ],
     "curve": 1.6,
     "levels": [
       15,
@@ -1931,13 +1931,13 @@
     "attack": 80,
     "defense": 110,
     "type": [
-		"GROUND"
-	],
+      "GROUND"
+    ],
     "moves": [
       "Bone Club",
       "Thrash",
-	  "Bonemerang",
-	  "Rage"
+      "Bonemerang",
+      "Rage"
     ],
     "curve": 1.6
   },
@@ -1946,13 +1946,13 @@
     "attack": 120,
     "defense": 53,
     "type": [
-		"FIGHTING"
-	],
+      "FIGHTING"
+    ],
     "moves": [
       "Rolling Kick",
-	  "Focus Energy",
-	  "Hi Jump Kick",
-	  "Mega Kick"
+      "Focus Energy",
+      "Hi Jump Kick",
+      "Mega Kick"
     ],
     "curve": 1.6,
     "levels": [
@@ -1966,8 +1966,8 @@
     "attack": 105,
     "defense": 79,
     "type": [
-		"FIGHTING"
-	],
+      "FIGHTING"
+    ],
     "moves": [
       "Mega Punch",
       "Ice Punch",
@@ -1986,12 +1986,12 @@
     "attack": 55,
     "defense": 75,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Wrap",
       "Stomp",
-	  "Disable",
+      "Disable",
       "Slam"
     ],
     "curve": 1.6,
@@ -2008,8 +2008,8 @@
     "evolveLevel": 35,
     "evolveTo": "110",
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Tackle",
       "Smog",
@@ -2027,11 +2027,11 @@
     "attack": 90,
     "defense": 120,
     "type": [
-		"POISON"
-	],
+      "POISON"
+    ],
     "moves": [
       "Sludge",
-	  "Self-Destruct",
+      "Self-Destruct",
       "Haze",
       "Explosion"
     ],
@@ -2044,14 +2044,14 @@
     "evolveLevel": 42,
     "evolveTo": "112",
     "type": [
-		"GROUND",
-		"ROCK"
-	],
+      "GROUND",
+      "ROCK"
+    ],
     "moves": [
       "Horn Attack",
       "Stomp",
-	  "Tail Whip",
-	  "Fury Attack"
+      "Tail Whip",
+      "Fury Attack"
     ],
     "curve": 1,
     "levels": [
@@ -2065,9 +2065,9 @@
     "attack": 130,
     "defense": 120,
     "type": [
-		"GROUND",
-		"ROCK"
-	],
+      "GROUND",
+      "ROCK"
+    ],
     "moves": [
       "Horn Attack",
       "Fury Attack",
@@ -2081,13 +2081,13 @@
     "attack": 5,
     "defense": 5,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Pound",
-	  "Double Slap",
+      "Double Slap",
       "Sing",
-	  "Double-Edge"
+      "Double-Edge"
     ],
     "curve": 1.9,
     "levels": [
@@ -2101,13 +2101,13 @@
     "attack": 55,
     "defense": 115,
     "type": [
-		"GRASS"
-	],
+      "GRASS"
+    ],
     "moves": [
       "Bind",
       "Absorb",
       "Slam",
-	  "Growth"
+      "Growth"
     ],
     "curve": 1.6,
     "levels": [
@@ -2121,11 +2121,11 @@
     "attack": 95,
     "defense": 80,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Rage",
-	  "Bite",
+      "Bite",
       "Mega Punch",
       "Dizzy Punch"
     ],
@@ -2143,13 +2143,13 @@
     "evolveLevel": 32,
     "evolveTo": "117",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Bubble",
       "Smokescreen",
       "Leer",
-	  "Water Gun"
+      "Water Gun"
     ],
     "curve": 1.6,
     "levels": [
@@ -2163,13 +2163,13 @@
     "attack": 65,
     "defense": 95,
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Bubble",
-	  "Water Gun",
-	  "Agility",
-	  "Hydro Pump"
+      "Water Gun",
+      "Agility",
+      "Hydro Pump"
     ],
     "curve": 1.6
   },
@@ -2180,13 +2180,13 @@
     "evolveLevel": 33,
     "evolveTo": "119",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Peck",
-	  "Supersonic",
+      "Supersonic",
       "Horn Attack",
-	  "Fury Attack"
+      "Fury Attack"
     ],
     "curve": 1.6,
     "levels": [
@@ -2200,11 +2200,11 @@
     "attack": 92,
     "defense": 65,
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Horn Attack",
-	  "Fury Attack",
+      "Fury Attack",
       "Waterfall",
       "Horn Drill"
     ],
@@ -2217,13 +2217,13 @@
     "evolveItem": "Water Stone",
     "evolveTo": "121",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Tackle",
-	  "Water Gun",
+      "Water Gun",
       "Recover",
-	  "Swift"
+      "Swift"
     ],
     "curve": 1,
     "levels": [
@@ -2237,14 +2237,14 @@
     "attack": 75,
     "defense": 85,
     "type": [
-		"WATER",
-		"PSYCHIC"
-	],
+      "WATER",
+      "PSYCHIC"
+    ],
     "moves": [
       "Water Gun",
-	  "Recover",
+      "Recover",
       "Swift",
-	  "Hydro Pump"
+      "Hydro Pump"
     ],
     "curve": 1
   },
@@ -2253,8 +2253,8 @@
     "attack": 45,
     "defense": 65,
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Confusion",
       "Light Screen",
@@ -2273,14 +2273,14 @@
     "attack": 110,
     "defense": 80,
     "type": [
-		"BUG",
-		"FLYING"
-	],
+      "BUG",
+      "FLYING"
+    ],
     "moves": [
       "Quick Attack",
       "Slash",
-	  "Swords Dance",
-	  "Agility"
+      "Swords Dance",
+      "Agility"
     ],
     "curve": 1.6,
     "levels": [
@@ -2294,9 +2294,9 @@
     "attack": 50,
     "defense": 35,
     "type": [
-		"ICE",
-		"PSYCHIC"
-	],
+      "ICE",
+      "PSYCHIC"
+    ],
     "moves": [
       "Ice Punch",
       "Body Slam",
@@ -2315,8 +2315,8 @@
     "attack": 83,
     "defense": 57,
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Quick Attack",
       "Thunder Shock",
@@ -2335,8 +2335,8 @@
     "attack": 95,
     "defense": 57,
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Ember",
       "Fire Punch",
@@ -2355,13 +2355,13 @@
     "attack": 125,
     "defense": 100,
     "type": [
-		"BUG"
-	],
+      "BUG"
+    ],
     "moves": [
       "Vice Grip",
-	  "Seismic Toss",
-	  "Guillotine",
-	  "Slash"
+      "Seismic Toss",
+      "Guillotine",
+      "Slash"
     ],
     "curve": 1,
     "levels": [
@@ -2375,13 +2375,13 @@
     "attack": 100,
     "defense": 95,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Tackle",
       "Stomp",
-	  "Rage",
-	  "Take Down"
+      "Rage",
+      "Take Down"
     ],
     "curve": 1,
     "levels": [
@@ -2397,11 +2397,11 @@
     "evolveLevel": 20,
     "evolveTo": "130",
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Splash",
-	  "Tackle"
+      "Tackle"
     ],
     "curve": 1,
     "levels": [
@@ -2415,12 +2415,12 @@
     "attack": 125,
     "defense": 79,
     "type": [
-		"WATER",
-		"FLYING"
-	],
+      "WATER",
+      "FLYING"
+    ],
     "moves": [
       "Bite",
-	  "Dragon Rage",
+      "Dragon Rage",
       "Hydro Pump",
       "Hyper Beam"
     ],
@@ -2431,9 +2431,9 @@
     "attack": 85,
     "defense": 80,
     "type": [
-		"WATER",
-		"ICE"
-	],
+      "WATER",
+      "ICE"
+    ],
     "moves": [
       "Body Slam",
       "Confuse Ray",
@@ -2452,8 +2452,8 @@
     "attack": 48,
     "defense": 48,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Transform"
     ],
@@ -2468,19 +2468,19 @@
     "name": "Eevee",
     "attack": 55,
     "defense": 50,
-	"evolveChoice": [
-		"Water Stone": "134",
-		"Thunderstone": "135",
-		"Fire Stone": "136"
-	],
+    "evolveChoice": [
+      "Water Stone": "134",
+      "Thunderstone": "135",
+      "Fire Stone": "136"
+    ],
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Tackle",
-	  "Quick Attack",
+      "Quick Attack",
       "Bite",
-	  "Take Down"
+      "Take Down"
     ],
     "curve": 1.6,
     "levels": [
@@ -2494,8 +2494,8 @@
     "attack": 65,
     "defense": 60,
     "type": [
-		"WATER"
-	],
+      "WATER"
+    ],
     "moves": [
       "Water Gun",
       "Bite",
@@ -2509,13 +2509,13 @@
     "attack": 65,
     "defense": 60,
     "type": [
-		"ELECTRIC"
-	],
+      "ELECTRIC"
+    ],
     "moves": [
       "Thunder Shock",
       "Double Kick",
       "Pin Missile",
-	  "Thunder"
+      "Thunder"
     ],
     "curve": 1.6
   },
@@ -2524,8 +2524,8 @@
     "attack": 130,
     "defense": 60,
     "type": [
-		"FIRE"
-	],
+      "FIRE"
+    ],
     "moves": [
       "Bite",
       "Fire Spin",
@@ -2539,11 +2539,11 @@
     "attack": 60,
     "defense": 70,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Tackle",
-	  "Psybeam",
+      "Psybeam",
       "Recover",
       "Tri Attack"
     ],
@@ -2561,9 +2561,9 @@
     "evolveLevel": 40,
     "evolveTo": "139",
     "type": [
-		"ROCK",
-		"WATER"
-	],
+      "ROCK",
+      "WATER"
+    ],
     "moves": [
       "Water Gun",
       "Horn Attack",
@@ -2582,9 +2582,9 @@
     "attack": 60,
     "defense": 125,
     "type": [
-		"ROCK",
-		"WATER"
-	],
+      "ROCK",
+      "WATER"
+    ],
     "moves": [
       "Water Gun",
       "Horn Attack",
@@ -2600,14 +2600,14 @@
     "evolveLevel": 40,
     "evolveTo": "141",
     "type": [
-		"ROCK",
-		"WATER"
-	],
+      "ROCK",
+      "WATER"
+    ],
     "moves": [
       "Scratch",
       "Absorb",
-	  "Slash",
-	  "Hydro Pump"
+      "Slash",
+      "Hydro Pump"
     ],
     "curve": 1.6,
     "levels": [
@@ -2621,14 +2621,14 @@
     "attack": 115,
     "defense": 105,
     "type": [
-		"ROCK",
-		"WATER"
-	],
+      "ROCK",
+      "WATER"
+    ],
     "moves": [
       "Scratch",
       "Absorb",
-	  "Slash",
-	  "Hydro Pump"
+      "Slash",
+      "Hydro Pump"
     ],
     "curve": 1.6
   },
@@ -2637,14 +2637,14 @@
     "attack": 105,
     "defense": 65,
     "type": [
-		"ROCK",
-		"FLYING"
-	],
+      "ROCK",
+      "FLYING"
+    ],
     "moves": [
       "Wing Attack",
       "Bite",
-	  "Take Down",
-	  "Hyper Beam"
+      "Take Down",
+      "Hyper Beam"
     ],
     "curve": 1,
     "levels": [
@@ -2658,8 +2658,8 @@
     "attack": 110,
     "defense": 65,
     "type": [
-		"NORMAL"
-	],
+      "NORMAL"
+    ],
     "moves": [
       "Rest",
       "Body Slam",
@@ -2678,14 +2678,14 @@
     "attack": 85,
     "defense": 100,
     "type": [
-		"ICE",
-		"FLYING"
-	],
+      "ICE",
+      "FLYING"
+    ],
     "moves": [
       "Peck",
       "Ice Beam",
       "Blizzard",
-	  "Mist"
+      "Mist"
     ],
     "curve": 1,
     "levels": [
@@ -2699,8 +2699,8 @@
     "attack": 90,
     "defense": 85,
     "type": [
-		"ELECTRIC",
-	],
+      "ELECTRIC",
+    ],
     "moves": [
       "Thunder Shock",
       "Drill Peck",
@@ -2719,9 +2719,9 @@
     "attack": 100,
     "defense": 90,
     "type": [
-		"FIRE",
-		"FLYING"
-	],
+      "FIRE",
+      "FLYING"
+    ],
     "moves": [
       "Peck",
       "Fire Spin",
@@ -2742,13 +2742,13 @@
     "evolveLevel": 30,
     "evolveTo": "148",
     "type": [
-		"DRAGON"
-	],
+      "DRAGON"
+    ],
     "moves": [
       "Wrap",
       "Leer",
-	  "Thunder Wave",
-	  "Agility"
+      "Thunder Wave",
+      "Agility"
     ],
     "curve": 1,
     "levels": [
@@ -2764,13 +2764,13 @@
     "evolveLevel": 55,
     "evolveTo": "149",
     "type": [
-		"DRAGON"
-	],
+      "DRAGON"
+    ],
     "moves": [
       "Wrap",
       "Thunder Wave",
-	  "Slam",
-	  "Dragon Rage"
+      "Slam",
+      "Dragon Rage"
     ],
     "curve": 1
   },
@@ -2779,14 +2779,14 @@
     "attack": 134,
     "defense": 95,
     "type": [
-		"DRAGON",
-		"FLYING"
-	],
+      "DRAGON",
+      "FLYING"
+    ],
     "moves": [
       "Wrap",
-	  "Slam",
-	  "Dragon Rage",
-	  "Hyper Beam"
+      "Slam",
+      "Dragon Rage",
+      "Hyper Beam"
     ],
     "curve": 1
   },
@@ -2795,11 +2795,11 @@
     "attack": 110,
     "defense": 90,
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Confusion",
-	  "Swift",
+      "Swift",
       "Psychic",
       "Recover"
     ],
@@ -2815,8 +2815,8 @@
     "attack": 100,
     "defense": 100,
     "type": [
-		"PSYCHIC"
-	],
+      "PSYCHIC"
+    ],
     "moves": [
       "Transform",
       "Mega Punch",
