@@ -930,7 +930,7 @@
     ],
     "moves": [
       "Scratch",
-      "Dig"
+      "Dig",
       "Slash",
       "Earthquake"
     ],
@@ -1167,7 +1167,7 @@
     ],
     "moves": [
       "Confusion",
-      "Disable"
+      "Disable",
       "Psybeam",
       "Psychic"
     ],
@@ -2469,9 +2469,9 @@
     "attack": 55,
     "defense": 50,
     "evolveChoice": [
-      "Water Stone": "134",
-      "Thunderstone": "135",
-      "Fire Stone": "136"
+      {"Water Stone": "134"},
+      {"Thunderstone": "135"},
+      {"Fire Stone": "136"}
     ],
     "type": [
       "NORMAL"
@@ -2699,7 +2699,7 @@
     "attack": 90,
     "defense": 85,
     "type": [
-      "ELECTRIC",
+      "ELECTRIC"
     ],
     "moves": [
       "Thunder Shock",
